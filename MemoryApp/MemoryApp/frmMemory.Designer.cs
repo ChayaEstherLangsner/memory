@@ -76,6 +76,7 @@
             this.lblScoreNum2 = new System.Windows.Forms.Label();
             this.lblScore2 = new System.Windows.Forms.Label();
             this.btnPlayer2Turn = new System.Windows.Forms.Button();
+            this.btnDone2 = new System.Windows.Forms.Button();
             this.tblPlayer2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtName2 = new System.Windows.Forms.TextBox();
             this.lblPlayer2 = new System.Windows.Forms.Label();
@@ -83,6 +84,7 @@
             this.lblScore1 = new System.Windows.Forms.Label();
             this.lblScoreNum1 = new System.Windows.Forms.Label();
             this.btnPlayer1Turn = new System.Windows.Forms.Button();
+            this.btnDone1 = new System.Windows.Forms.Button();
             this.lblMemory = new System.Windows.Forms.Label();
             this.tblPlayer1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblPlayer1 = new System.Windows.Forms.Label();
@@ -566,17 +568,19 @@
             // tblScore2
             // 
             this.tblScore2.ColumnCount = 2;
-            this.tblScore2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.82806F));
-            this.tblScore2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.17195F));
+            this.tblScore2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.49321F));
+            this.tblScore2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.50679F));
             this.tblScore2.Controls.Add(this.lblScoreNum2, 0, 0);
             this.tblScore2.Controls.Add(this.lblScore2, 0, 0);
             this.tblScore2.Controls.Add(this.btnPlayer2Turn, 0, 1);
+            this.tblScore2.Controls.Add(this.btnDone2, 0, 2);
             this.tblScore2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblScore2.Location = new System.Drawing.Point(3, 490);
             this.tblScore2.Name = "tblScore2";
-            this.tblScore2.RowCount = 2;
-            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.1282F));
-            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.8718F));
+            this.tblScore2.RowCount = 3;
+            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tblScore2.Size = new System.Drawing.Size(221, 156);
             this.tblScore2.TabIndex = 4;
             // 
@@ -584,10 +588,11 @@
             // 
             this.lblScoreNum2.AutoSize = true;
             this.lblScoreNum2.BackColor = System.Drawing.Color.White;
+            this.lblScoreNum2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblScoreNum2.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblScoreNum2.Location = new System.Drawing.Point(174, 0);
+            this.lblScoreNum2.Location = new System.Drawing.Point(160, 0);
             this.lblScoreNum2.Name = "lblScoreNum2";
-            this.lblScoreNum2.Size = new System.Drawing.Size(38, 40);
+            this.lblScoreNum2.Size = new System.Drawing.Size(58, 46);
             this.lblScoreNum2.TabIndex = 2;
             this.lblScoreNum2.Text = "0";
             // 
@@ -598,7 +603,7 @@
             this.lblScore2.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblScore2.Location = new System.Drawing.Point(3, 0);
             this.lblScore2.Name = "lblScore2";
-            this.lblScore2.Size = new System.Drawing.Size(165, 46);
+            this.lblScore2.Size = new System.Drawing.Size(151, 46);
             this.lblScore2.TabIndex = 1;
             this.lblScore2.Text = "Score:";
             this.lblScore2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -610,9 +615,21 @@
             this.btnPlayer2Turn.Font = new System.Drawing.Font("MV Boli", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPlayer2Turn.Location = new System.Drawing.Point(3, 49);
             this.btnPlayer2Turn.Name = "btnPlayer2Turn";
-            this.btnPlayer2Turn.Size = new System.Drawing.Size(215, 52);
+            this.btnPlayer2Turn.Size = new System.Drawing.Size(215, 48);
             this.btnPlayer2Turn.TabIndex = 3;
             this.btnPlayer2Turn.UseVisualStyleBackColor = true;
+            // 
+            // btnDone2
+            // 
+            this.tblScore2.SetColumnSpan(this.btnDone2, 2);
+            this.btnDone2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDone2.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDone2.Location = new System.Drawing.Point(3, 103);
+            this.btnDone2.Name = "btnDone2";
+            this.btnDone2.Size = new System.Drawing.Size(215, 50);
+            this.btnDone2.TabIndex = 4;
+            this.btnDone2.Text = "Done";
+            this.btnDone2.UseVisualStyleBackColor = true;
             // 
             // tblPlayer2
             // 
@@ -652,17 +669,19 @@
             // tblScore1
             // 
             this.tblScore1.ColumnCount = 2;
-            this.tblScore1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.82806F));
-            this.tblScore1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.17195F));
+            this.tblScore1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.23077F));
+            this.tblScore1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.76923F));
             this.tblScore1.Controls.Add(this.lblScore1, 0, 0);
             this.tblScore1.Controls.Add(this.lblScoreNum1, 1, 0);
             this.tblScore1.Controls.Add(this.btnPlayer1Turn, 0, 1);
+            this.tblScore1.Controls.Add(this.btnDone1, 0, 2);
             this.tblScore1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblScore1.Location = new System.Drawing.Point(3, 205);
             this.tblScore1.Name = "tblScore1";
-            this.tblScore1.RowCount = 2;
-            this.tblScore1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.40541F));
-            this.tblScore1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.5946F));
+            this.tblScore1.RowCount = 3;
+            this.tblScore1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblScore1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tblScore1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tblScore1.Size = new System.Drawing.Size(221, 148);
             this.tblScore1.TabIndex = 2;
             // 
@@ -673,7 +692,7 @@
             this.lblScore1.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblScore1.Location = new System.Drawing.Point(3, 0);
             this.lblScore1.Name = "lblScore1";
-            this.lblScore1.Size = new System.Drawing.Size(165, 45);
+            this.lblScore1.Size = new System.Drawing.Size(146, 44);
             this.lblScore1.TabIndex = 0;
             this.lblScore1.Text = "Score:";
             this.lblScore1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -682,10 +701,11 @@
             // 
             this.lblScoreNum1.AutoSize = true;
             this.lblScoreNum1.BackColor = System.Drawing.Color.White;
+            this.lblScoreNum1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblScoreNum1.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblScoreNum1.Location = new System.Drawing.Point(174, 0);
+            this.lblScoreNum1.Location = new System.Drawing.Point(155, 0);
             this.lblScoreNum1.Name = "lblScoreNum1";
-            this.lblScoreNum1.Size = new System.Drawing.Size(38, 40);
+            this.lblScoreNum1.Size = new System.Drawing.Size(63, 44);
             this.lblScoreNum1.TabIndex = 1;
             this.lblScoreNum1.Text = "0";
             // 
@@ -694,11 +714,23 @@
             this.tblScore1.SetColumnSpan(this.btnPlayer1Turn, 2);
             this.btnPlayer1Turn.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPlayer1Turn.Font = new System.Drawing.Font("MV Boli", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPlayer1Turn.Location = new System.Drawing.Point(3, 48);
+            this.btnPlayer1Turn.Location = new System.Drawing.Point(3, 47);
             this.btnPlayer1Turn.Name = "btnPlayer1Turn";
-            this.btnPlayer1Turn.Size = new System.Drawing.Size(215, 52);
+            this.btnPlayer1Turn.Size = new System.Drawing.Size(215, 45);
             this.btnPlayer1Turn.TabIndex = 2;
             this.btnPlayer1Turn.UseVisualStyleBackColor = true;
+            // 
+            // btnDone1
+            // 
+            this.tblScore1.SetColumnSpan(this.btnDone1, 2);
+            this.btnDone1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDone1.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDone1.Location = new System.Drawing.Point(3, 98);
+            this.btnDone1.Name = "btnDone1";
+            this.btnDone1.Size = new System.Drawing.Size(215, 47);
+            this.btnDone1.TabIndex = 3;
+            this.btnDone1.Text = "Done";
+            this.btnDone1.UseVisualStyleBackColor = true;
             // 
             // lblMemory
             // 
@@ -859,5 +891,7 @@
         private TextBox txtName1;
         private Button btnPlayer2Turn;
         private Button btnPlayer1Turn;
+        private Button btnDone2;
+        private Button btnDone1;
     }
 }
