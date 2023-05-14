@@ -37,7 +37,7 @@ namespace MemoryApp
             InitializeComponent();
             AddAllButtonsToList(listallbuttons);
             btnStart.Click += BtnStart_Click;
-            SetButtonVisible(listallbuttons, false);
+            SetlstButtonVisible(listallbuttons, false);
             for (int i = 1; i <= 40; i++)
             {
                 Button btn = (Button)Controls.Find("btn" + i.ToString(), true)[0];
@@ -105,7 +105,7 @@ namespace MemoryApp
         {
             tbl.BackgroundImage = box.Image;
         }
-        private void SetButtonVisible(List<Button> lstbtn, bool tf)
+        private void SetlstButtonVisible(List<Button> lstbtn, bool tf)
         {
             lstbtn.ForEach(b => b.Visible = tf);
         }
@@ -175,18 +175,27 @@ namespace MemoryApp
             }
             else if (btnStart.Text == "New Game")
             {
-                tblPlayersVisible(true);
-                SetBtnStartText("Start");
-                SetButtonVisible(listallbuttons, false);
-                TblScore1Visible(false);
-                listallbuttonsforpairing.Clear();
-                AddAllButtonsToList(listallbuttonsforpairing);
-                scoreplayer1 = 0;
-                scoreplayer2 = 0;
-                lblScoreNum1.Text = "0";
-                lblScoreNum2.Text = "0";
-                SetDisplayMessage("Enter Names To Begin");
-                ClearTurns();
+                DialogResult result = MessageBox.Show("Are you sure you want to start a new game?", "Confirmation", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    tblPlayersVisible(true);
+                    SetBtnStartText("Start");
+                    SetlstButtonVisible(listallbuttons, false);
+                    TblScore1Visible(false);
+                    listallbuttonsforpairing.Clear();
+                    AddAllButtonsToList(listallbuttonsforpairing);
+                    scoreplayer1 = 0;
+                    scoreplayer2 = 0;
+                    lblScoreNum1.Text = "0";
+                    lblScoreNum2.Text = "0";
+                    SetDisplayMessage("Enter Names To Begin");
+                    ClearTurns();
+                }
+                else if (result == DialogResult.No)
+                {
+                    return;
+                }
             }
             else
             {
@@ -196,7 +205,7 @@ namespace MemoryApp
                 lblScore2.Text = txtName2.Text + "'s Score";
                 SetDisplayMessage(txtName1.Text + "'s Turn");
                 tblPlayersVisible(false);
-                SetButtonVisible(listallbuttons, true);
+                SetlstButtonVisible(listallbuttons, true);
                 SetImage("cover", backpicbox);
                 PairButtons();
                 SetlstImageBox(listallbuttons, backpicbox);
