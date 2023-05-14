@@ -557,7 +557,7 @@
             // 
             // btn9
             // 
-            this.btn9.BackColor = System.Drawing.SystemColors.Control;
+            this.btn9.BackColor = System.Drawing.Color.Transparent;
             this.btn9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn9.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
