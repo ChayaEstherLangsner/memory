@@ -72,7 +72,7 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.tblPlayers = new System.Windows.Forms.TableLayoutPanel();
-            this.tblScore2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblDisplay = new System.Windows.Forms.TableLayoutPanel();
             this.lblPlayerTurnDisplay = new System.Windows.Forms.Label();
             this.tblPlayer2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtName2 = new System.Windows.Forms.TextBox();
@@ -92,7 +92,7 @@
             this.tblMain.SuspendLayout();
             this.tblCards.SuspendLayout();
             this.tblPlayers.SuspendLayout();
-            this.tblScore2.SuspendLayout();
+            this.tblDisplay.SuspendLayout();
             this.tblPlayer2.SuspendLayout();
             this.tblScore1.SuspendLayout();
             this.tblPlayer1.SuspendLayout();
@@ -100,6 +100,7 @@
             // 
             // tblMain
             // 
+            this.tblMain.BackColor = System.Drawing.Color.Honeydew;
             this.tblMain.ColumnCount = 4;
             this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.142811F));
             this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.81052F));
@@ -118,6 +119,8 @@
             // 
             // tblCards
             // 
+            this.tblCards.BackColor = System.Drawing.Color.Transparent;
+            this.tblCards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tblCards.ColumnCount = 8;
             this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -183,369 +186,494 @@
             // btn37
             // 
             this.btn37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn37.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn37.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn37.Location = new System.Drawing.Point(559, 575);
             this.btn37.Name = "btn37";
             this.btn37.Size = new System.Drawing.Size(133, 140);
             this.btn37.TabIndex = 42;
+            this.btn37.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn37.UseVisualStyleBackColor = true;
             // 
             // btn36
             // 
             this.btn36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn36.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn36.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn36.Location = new System.Drawing.Point(420, 575);
             this.btn36.Name = "btn36";
             this.btn36.Size = new System.Drawing.Size(133, 140);
             this.btn36.TabIndex = 41;
+            this.btn36.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn36.UseVisualStyleBackColor = true;
             // 
             // btn35
             // 
             this.btn35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn35.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn35.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn35.Location = new System.Drawing.Point(281, 575);
             this.btn35.Name = "btn35";
             this.btn35.Size = new System.Drawing.Size(133, 140);
             this.btn35.TabIndex = 40;
+            this.btn35.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn35.UseVisualStyleBackColor = true;
             // 
             // btn34
             // 
             this.btn34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn34.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn34.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn34.Location = new System.Drawing.Point(142, 575);
             this.btn34.Name = "btn34";
             this.btn34.Size = new System.Drawing.Size(133, 140);
             this.btn34.TabIndex = 39;
+            this.btn34.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn34.UseVisualStyleBackColor = true;
             // 
             // btn40
             // 
             this.btn40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn40.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn40.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn40.Location = new System.Drawing.Point(976, 575);
             this.btn40.Name = "btn40";
             this.btn40.Size = new System.Drawing.Size(134, 140);
             this.btn40.TabIndex = 38;
+            this.btn40.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn40.UseVisualStyleBackColor = true;
             // 
             // btn39
             // 
             this.btn39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn39.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn39.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn39.Location = new System.Drawing.Point(837, 575);
             this.btn39.Name = "btn39";
             this.btn39.Size = new System.Drawing.Size(133, 140);
             this.btn39.TabIndex = 37;
+            this.btn39.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn39.UseVisualStyleBackColor = true;
             // 
             // btn38
             // 
             this.btn38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn38.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn38.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn38.Location = new System.Drawing.Point(698, 575);
             this.btn38.Name = "btn38";
             this.btn38.Size = new System.Drawing.Size(133, 140);
             this.btn38.TabIndex = 36;
+            this.btn38.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn38.UseVisualStyleBackColor = true;
             // 
             // btn27
             // 
             this.btn27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn27.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn27.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn27.Location = new System.Drawing.Point(281, 432);
             this.btn27.Name = "btn27";
             this.btn27.Size = new System.Drawing.Size(133, 137);
             this.btn27.TabIndex = 35;
+            this.btn27.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn27.UseVisualStyleBackColor = true;
             // 
             // btn28
             // 
             this.btn28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn28.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn28.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn28.Location = new System.Drawing.Point(420, 432);
             this.btn28.Name = "btn28";
             this.btn28.Size = new System.Drawing.Size(133, 137);
             this.btn28.TabIndex = 34;
+            this.btn28.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn28.UseVisualStyleBackColor = true;
             // 
             // btn25
             // 
             this.btn25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn25.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn25.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn25.Location = new System.Drawing.Point(3, 432);
             this.btn25.Name = "btn25";
             this.btn25.Size = new System.Drawing.Size(133, 137);
             this.btn25.TabIndex = 33;
+            this.btn25.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn25.UseVisualStyleBackColor = true;
             // 
             // btn26
             // 
             this.btn26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn26.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn26.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn26.Location = new System.Drawing.Point(142, 432);
             this.btn26.Name = "btn26";
             this.btn26.Size = new System.Drawing.Size(133, 137);
             this.btn26.TabIndex = 32;
+            this.btn26.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn26.UseVisualStyleBackColor = true;
             // 
             // btn33
             // 
             this.btn33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn33.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn33.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn33.Location = new System.Drawing.Point(3, 575);
             this.btn33.Name = "btn33";
             this.btn33.Size = new System.Drawing.Size(133, 140);
             this.btn33.TabIndex = 28;
+            this.btn33.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn33.UseVisualStyleBackColor = true;
             // 
             // btn32
             // 
             this.btn32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn32.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn32.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn32.Location = new System.Drawing.Point(976, 432);
             this.btn32.Name = "btn32";
             this.btn32.Size = new System.Drawing.Size(134, 137);
             this.btn32.TabIndex = 27;
+            this.btn32.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn32.UseVisualStyleBackColor = true;
             // 
             // btn31
             // 
             this.btn31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn31.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn31.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn31.Location = new System.Drawing.Point(837, 432);
             this.btn31.Name = "btn31";
             this.btn31.Size = new System.Drawing.Size(133, 137);
             this.btn31.TabIndex = 26;
+            this.btn31.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn31.UseVisualStyleBackColor = true;
             // 
             // btn30
             // 
             this.btn30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn30.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn30.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn30.Location = new System.Drawing.Point(698, 432);
             this.btn30.Name = "btn30";
             this.btn30.Size = new System.Drawing.Size(133, 137);
             this.btn30.TabIndex = 25;
+            this.btn30.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn30.UseVisualStyleBackColor = true;
             // 
             // btn29
             // 
             this.btn29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn29.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn29.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn29.Location = new System.Drawing.Point(559, 432);
             this.btn29.Name = "btn29";
             this.btn29.Size = new System.Drawing.Size(133, 137);
             this.btn29.TabIndex = 24;
+            this.btn29.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn29.UseVisualStyleBackColor = true;
             // 
             // btn24
             // 
             this.btn24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn24.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn24.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn24.Location = new System.Drawing.Point(976, 289);
             this.btn24.Name = "btn24";
             this.btn24.Size = new System.Drawing.Size(134, 137);
             this.btn24.TabIndex = 23;
+            this.btn24.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn24.UseVisualStyleBackColor = true;
             // 
             // btn23
             // 
             this.btn23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn23.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn23.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn23.Location = new System.Drawing.Point(837, 289);
             this.btn23.Name = "btn23";
             this.btn23.Size = new System.Drawing.Size(133, 137);
             this.btn23.TabIndex = 22;
+            this.btn23.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn23.UseVisualStyleBackColor = true;
             // 
             // btn22
             // 
             this.btn22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn22.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn22.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn22.Location = new System.Drawing.Point(698, 289);
             this.btn22.Name = "btn22";
             this.btn22.Size = new System.Drawing.Size(133, 137);
             this.btn22.TabIndex = 21;
+            this.btn22.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn22.UseVisualStyleBackColor = true;
             // 
             // btn21
             // 
             this.btn21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn21.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn21.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn21.Location = new System.Drawing.Point(559, 289);
             this.btn21.Name = "btn21";
             this.btn21.Size = new System.Drawing.Size(133, 137);
             this.btn21.TabIndex = 20;
+            this.btn21.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn21.UseVisualStyleBackColor = true;
             // 
             // btn20
             // 
             this.btn20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn20.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn20.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn20.Location = new System.Drawing.Point(420, 289);
             this.btn20.Name = "btn20";
             this.btn20.Size = new System.Drawing.Size(133, 137);
             this.btn20.TabIndex = 19;
+            this.btn20.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn20.UseVisualStyleBackColor = true;
             // 
             // btn19
             // 
             this.btn19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn19.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn19.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn19.Location = new System.Drawing.Point(281, 289);
             this.btn19.Name = "btn19";
             this.btn19.Size = new System.Drawing.Size(133, 137);
             this.btn19.TabIndex = 18;
+            this.btn19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn19.UseVisualStyleBackColor = true;
             // 
             // btn18
             // 
             this.btn18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn18.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn18.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn18.Location = new System.Drawing.Point(142, 289);
             this.btn18.Name = "btn18";
             this.btn18.Size = new System.Drawing.Size(133, 137);
             this.btn18.TabIndex = 17;
+            this.btn18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn18.UseVisualStyleBackColor = true;
             // 
             // btn17
             // 
             this.btn17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn17.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn17.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn17.Location = new System.Drawing.Point(3, 289);
             this.btn17.Name = "btn17";
             this.btn17.Size = new System.Drawing.Size(133, 137);
             this.btn17.TabIndex = 16;
+            this.btn17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn17.UseVisualStyleBackColor = true;
             // 
             // btn16
             // 
             this.btn16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn16.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn16.Location = new System.Drawing.Point(976, 146);
             this.btn16.Name = "btn16";
             this.btn16.Size = new System.Drawing.Size(134, 137);
             this.btn16.TabIndex = 15;
+            this.btn16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn16.UseVisualStyleBackColor = true;
             // 
             // btn15
             // 
             this.btn15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn15.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn15.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn15.Location = new System.Drawing.Point(837, 146);
             this.btn15.Name = "btn15";
             this.btn15.Size = new System.Drawing.Size(133, 137);
             this.btn15.TabIndex = 14;
+            this.btn15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn15.UseVisualStyleBackColor = true;
             // 
             // btn14
             // 
             this.btn14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn14.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn14.Location = new System.Drawing.Point(698, 146);
             this.btn14.Name = "btn14";
             this.btn14.Size = new System.Drawing.Size(133, 137);
             this.btn14.TabIndex = 13;
+            this.btn14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn14.UseVisualStyleBackColor = true;
             // 
             // btn13
             // 
             this.btn13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn13.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn13.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn13.Location = new System.Drawing.Point(559, 146);
             this.btn13.Name = "btn13";
             this.btn13.Size = new System.Drawing.Size(133, 137);
             this.btn13.TabIndex = 12;
+            this.btn13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn13.UseVisualStyleBackColor = true;
             // 
             // btn12
             // 
             this.btn12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn12.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn12.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn12.Location = new System.Drawing.Point(420, 146);
             this.btn12.Name = "btn12";
             this.btn12.Size = new System.Drawing.Size(133, 137);
             this.btn12.TabIndex = 11;
+            this.btn12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn12.UseVisualStyleBackColor = true;
             // 
             // btn11
             // 
             this.btn11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn11.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn11.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn11.Location = new System.Drawing.Point(281, 146);
             this.btn11.Name = "btn11";
             this.btn11.Size = new System.Drawing.Size(133, 137);
             this.btn11.TabIndex = 10;
+            this.btn11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn11.UseVisualStyleBackColor = true;
             // 
             // btn10
             // 
             this.btn10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn10.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn10.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn10.Location = new System.Drawing.Point(142, 146);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(133, 137);
             this.btn10.TabIndex = 9;
+            this.btn10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn10.UseVisualStyleBackColor = true;
             // 
             // btn9
             // 
+            this.btn9.BackColor = System.Drawing.SystemColors.Control;
             this.btn9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn9.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn9.Location = new System.Drawing.Point(3, 146);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(133, 137);
             this.btn9.TabIndex = 8;
-            this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn9.UseVisualStyleBackColor = false;
             // 
             // btn8
             // 
             this.btn8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn8.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn8.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn8.Location = new System.Drawing.Point(976, 3);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(134, 137);
             this.btn8.TabIndex = 7;
+            this.btn8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn8.UseVisualStyleBackColor = true;
             // 
             // btn7
             // 
             this.btn7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn7.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn7.Location = new System.Drawing.Point(837, 3);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(133, 137);
             this.btn7.TabIndex = 6;
+            this.btn7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn7.UseVisualStyleBackColor = true;
             // 
             // btn6
             // 
             this.btn6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn6.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn6.Location = new System.Drawing.Point(698, 3);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(133, 137);
             this.btn6.TabIndex = 5;
+            this.btn6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn6.UseVisualStyleBackColor = true;
             // 
             // btn5
             // 
             this.btn5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn5.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn5.Location = new System.Drawing.Point(559, 3);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(133, 137);
             this.btn5.TabIndex = 4;
+            this.btn5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn5.UseVisualStyleBackColor = true;
             // 
             // btn4
             // 
             this.btn4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn4.Location = new System.Drawing.Point(420, 3);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(133, 137);
             this.btn4.TabIndex = 3;
+            this.btn4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn4.UseVisualStyleBackColor = true;
             // 
             // btn3
             // 
             this.btn3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn3.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3.Location = new System.Drawing.Point(281, 3);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(133, 137);
             this.btn3.TabIndex = 2;
+            this.btn3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3.UseVisualStyleBackColor = true;
             // 
             // btn2
             // 
             this.btn2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn2.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn2.Location = new System.Drawing.Point(142, 3);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(133, 137);
             this.btn2.TabIndex = 1;
+            this.btn2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn2.UseVisualStyleBackColor = true;
             // 
             // btn1
             // 
             this.btn1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn1.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn1.Location = new System.Drawing.Point(3, 3);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(133, 137);
             this.btn1.TabIndex = 0;
+            this.btn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn1.UseVisualStyleBackColor = true;
             // 
             // tblPlayers
             // 
             this.tblPlayers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tblPlayers.BackColor = System.Drawing.Color.Transparent;
             this.tblPlayers.ColumnCount = 1;
             this.tblPlayers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPlayers.Controls.Add(this.tblScore2, 0, 4);
+            this.tblPlayers.Controls.Add(this.tblDisplay, 0, 4);
             this.tblPlayers.Controls.Add(this.tblPlayer2, 0, 3);
             this.tblPlayers.Controls.Add(this.tblScore1, 0, 2);
             this.tblPlayers.Controls.Add(this.lblMemory, 0, 0);
@@ -563,26 +691,24 @@
             this.tblPlayers.Size = new System.Drawing.Size(227, 718);
             this.tblPlayers.TabIndex = 1;
             // 
-            // tblScore2
+            // tblDisplay
             // 
-            this.tblScore2.ColumnCount = 2;
-            this.tblScore2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.49321F));
-            this.tblScore2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.50679F));
-            this.tblScore2.Controls.Add(this.lblPlayerTurnDisplay, 0, 0);
-            this.tblScore2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblScore2.Location = new System.Drawing.Point(3, 506);
-            this.tblScore2.Name = "tblScore2";
-            this.tblScore2.RowCount = 2;
-            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.15385F));
-            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.84615F));
-            this.tblScore2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblScore2.Size = new System.Drawing.Size(221, 139);
-            this.tblScore2.TabIndex = 4;
+            this.tblDisplay.ColumnCount = 1;
+            this.tblDisplay.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblDisplay.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblDisplay.Controls.Add(this.lblPlayerTurnDisplay, 0, 0);
+            this.tblDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblDisplay.Location = new System.Drawing.Point(3, 506);
+            this.tblDisplay.Name = "tblDisplay";
+            this.tblDisplay.RowCount = 2;
+            this.tblDisplay.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.15385F));
+            this.tblDisplay.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.84615F));
+            this.tblDisplay.Size = new System.Drawing.Size(221, 139);
+            this.tblDisplay.TabIndex = 4;
             // 
             // lblPlayerTurnDisplay
             // 
             this.lblPlayerTurnDisplay.AutoSize = true;
-            this.tblScore2.SetColumnSpan(this.lblPlayerTurnDisplay, 2);
             this.lblPlayerTurnDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlayerTurnDisplay.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPlayerTurnDisplay.Location = new System.Drawing.Point(3, 0);
@@ -793,8 +919,8 @@
             this.tblCards.ResumeLayout(false);
             this.tblPlayers.ResumeLayout(false);
             this.tblPlayers.PerformLayout();
-            this.tblScore2.ResumeLayout(false);
-            this.tblScore2.PerformLayout();
+            this.tblDisplay.ResumeLayout(false);
+            this.tblDisplay.PerformLayout();
             this.tblPlayer2.ResumeLayout(false);
             this.tblPlayer2.PerformLayout();
             this.tblScore1.ResumeLayout(false);
@@ -851,7 +977,7 @@
         private Button btn28;
         private Button btn25;
         private Button btn26;
-        private TableLayoutPanel tblScore2;
+        private TableLayoutPanel tblDisplay;
         private TableLayoutPanel tblPlayer2;
         private TableLayoutPanel tblScore1;
         private TableLayoutPanel tblPlayer1;
