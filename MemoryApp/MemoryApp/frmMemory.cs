@@ -41,10 +41,10 @@ namespace MemoryApp
             for (int i = 1; i <= 40; i++)
             {
                 Button btn = (Button)Controls.Find("btn" + i.ToString(), true)[0];
-                btn.Click += Btn_Click;
+                btn.Click += Btn_CardClick;
             }
             AddAllButtonsToList(listallbuttonsforpairing);
-            btnDone1.Click += BtnDone1_Click;
+            btnDone1.Click += BtnDone_Click;
             TblScore1Visible(false);
         }
         private void SetDisplayMessage(string message)
@@ -109,16 +109,9 @@ namespace MemoryApp
         {
             lstbtn.ForEach(b => b.Visible = tf);
         }
-        //AF This doesn't seem to be called anywhere, you can delete if it's not being used
-        private void SetButtonVisible(Button btn, bool tf)
-        {
-            btn.Visible = tf;
-        }
         private void SetImage(string image, PictureBox box)
         {
-
             box.Image = System.Drawing.Image.FromFile(path + image + ".png");
-
         }
 
         private void SetButtonWithPic(int intname)
@@ -130,7 +123,6 @@ namespace MemoryApp
         }
         private void PairButtons()
         {
-
             for (int i = 1; i < 21; i++)
             {
                 num = i;
@@ -165,6 +157,36 @@ namespace MemoryApp
         {
             btnStart.Text = txt;
         }
+        private void SetUpNewGame()
+        {
+            tblPlayersVisible(true);
+            SetBtnStartText("Start");
+            SetlstButtonVisible(listallbuttons, false);
+            TblScore1Visible(false);
+            listallbuttonsforpairing.Clear();
+            AddAllButtonsToList(listallbuttonsforpairing);
+            scoreplayer1 = 0;
+            scoreplayer2 = 0;
+            lblScoreNum1.Text = "0";
+            lblScoreNum2.Text = "0";
+            SetDisplayMessage("Enter Names To Begin");
+            ClearTurns();
+        }
+        private void StartUpNewGame()
+        {
+            SetBtnStartText("New Game");
+            TblScore1Visible(true);
+            lblScore1.Text = txtName1.Text + "'s Score";
+            lblScore2.Text = txtName2.Text + "'s Score";
+            SetDisplayMessage(txtName1.Text + "'s Turn");
+            tblPlayersVisible(false);
+            SetlstButtonVisible(listallbuttons, true);
+            SetImage("cover", backpicbox);
+            PairButtons();
+            SetlstImageBox(listallbuttons, backpicbox);
+            gamestatus = gamestatusenum.Player1turn;
+            btnDone1.Visible = false;
+        }
         //AF I think it would be neater code to move this out of the event handler into its own procedure, and then just call it here
         private void BtnStart_Click(object? sender, EventArgs e)
         {
@@ -181,18 +203,7 @@ namespace MemoryApp
 
                 if (result == DialogResult.Yes)
                 {
-                    tblPlayersVisible(true);
-                    SetBtnStartText("Start");
-                    SetlstButtonVisible(listallbuttons, false);
-                    TblScore1Visible(false);
-                    listallbuttonsforpairing.Clear();
-                    AddAllButtonsToList(listallbuttonsforpairing);
-                    scoreplayer1 = 0;
-                    scoreplayer2 = 0;
-                    lblScoreNum1.Text = "0";
-                    lblScoreNum2.Text = "0";
-                    SetDisplayMessage("Enter Names To Begin");
-                    ClearTurns();
+                    SetUpNewGame();
                 }
                 else if (result == DialogResult.No)
                 {
@@ -201,18 +212,7 @@ namespace MemoryApp
             }
             else
             {
-                SetBtnStartText("New Game");
-                TblScore1Visible(true);
-                lblScore1.Text = txtName1.Text + "'s Score";
-                lblScore2.Text = txtName2.Text + "'s Score";
-                SetDisplayMessage(txtName1.Text + "'s Turn");
-                tblPlayersVisible(false);
-                SetlstButtonVisible(listallbuttons, true);
-                SetImage("cover", backpicbox);
-                PairButtons();
-                SetlstImageBox(listallbuttons, backpicbox);
-                gamestatus = gamestatusenum.Player1turn;
-                btnDone1.Visible = false;
+                StartUpNewGame();
             }
         }
         private void DetectWinner()
@@ -266,57 +266,59 @@ namespace MemoryApp
 
         //AF I think it would be neater code to move this out of the event handler into its own procedure, and then just call it here
         //AF It would be good to make the name clearer, like BtnCardClick etc. - when I see BtnClick, I don't know what button it's refering to
-        private void Btn_Click(object? sender, EventArgs e)
+        private void PlayerTurn(object? sender)
+        {
+            Button clickedButton = (Button)sender;
+            if (firstClickedButton != null && firstClickedButton.Name == clickedButton.Name)
+            {
+                {
+                    return;
+                }
+            }
+            if (secondClickedButton == null)
+            {
+                pic = clickedButton.Text;
+
+                if (firstClickedButton == null)
+                {
+                    firstClickedButton = clickedButton;
+                    SetImage(pic, frontpicbox);
+                    SetbtnImageBox(clickedButton, frontpicbox);
+                }
+                //AF This is repeating the same exact if statement that the code is already nested in
+                else
+                {
+                    secondClickedButton = clickedButton;
+                    SetImage(pic, frontpicbox);
+                    SetbtnImageBox(clickedButton, frontpicbox);
+                }
+                playerClickCount++;
+                if (secondClickedButton != null)
+                {
+                    if (firstClickedButton.Text == secondClickedButton.Text)
+                    {
+                        GotMatch();
+
+                    }
+                    else
+                    {
+                        btnDone1.Visible = true;
+                    }
+                }
+            }
+        }
+        private void Btn_CardClick(object? sender, EventArgs e)
         {
             if (playerClickCount >= 2)
                 return;
             else
             {
-                Button clickedButton = (Button)sender;
-                if (firstClickedButton != null)
-                {
-                    //AF You can combine this with the if statement above it by using the and operator (&) - no need to divide it into 2 if statements
-                    if (firstClickedButton.Name == clickedButton.Name)
-                    {
-                        return;
-                    }
-                }
-                if (secondClickedButton == null)
-                {
-                    pic = clickedButton.Text;
-
-                    if (firstClickedButton == null)
-                    {
-                        firstClickedButton = clickedButton;
-                        SetImage(pic, frontpicbox);
-                        SetbtnImageBox(clickedButton, frontpicbox);
-                    }
-                    //AF This is repeating the same exact if statement that the code is already nested in
-                    else if (secondClickedButton == null)
-                    {
-                        secondClickedButton = clickedButton;
-                        SetImage(pic, frontpicbox);
-                        SetbtnImageBox(clickedButton, frontpicbox);
-                    }
-                    playerClickCount++;
-                    if (secondClickedButton != null)
-                    {
-                        if (firstClickedButton.Text == secondClickedButton.Text)
-                        {
-                            GotMatch();
-
-                        }
-                        else
-                        {
-                            btnDone1.Visible = true;
-                        }
-                    }
-                }
+                PlayerTurn(sender);
             }
         }
         
         //AF Is there a reason that the button is called BtnDone1 and not just BtnDone.  Done1 makes it sound like there is more than one "done" button
-        private void BtnDone1_Click(object? sender, EventArgs e)
+        private void BtnDone_Click(object? sender, EventArgs e)
         {
             
             btnDone1.Visible = false;
