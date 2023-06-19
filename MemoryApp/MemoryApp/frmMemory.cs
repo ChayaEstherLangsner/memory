@@ -56,17 +56,17 @@ namespace MemoryApp
             lst.AddRange(new[] {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17, btn18, btn19, btn20,
                 btn21, btn22, btn23, btn24, btn25, btn26, btn27, btn28, btn29, btn30, btn31, btn32, btn33, btn34, btn35, btn36, btn37, btn38, btn39, btn40});
         }
-        private void SetLstButtonColor(List<Button> lstbtn, Color clr,bool backcolor)
+        private void SetLstButtonColor(List<Button> lstbtn, Color clr, bool backcolor)
         {
             if (backcolor == true)
-            lstbtn.ForEach(b => b.BackColor = clr);
+                lstbtn.ForEach(b => b.BackColor = clr);
             else
                 lstbtn.ForEach(b => b.ForeColor = clr);
         }
         private void SetButtonColor(Button btn, Color clr, bool backcolor)
         {
-            if(backcolor == true)
-            btn.BackColor = clr;
+            if (backcolor == true)
+                btn.BackColor = clr;
             else
                 btn.ForeColor = clr;
 
@@ -116,12 +116,12 @@ namespace MemoryApp
         private void SetImage(string image, PictureBox box)
         {
 
-                box.Image = System.Drawing.Image.FromFile(path + image + ".png");
-            
+            box.Image = System.Drawing.Image.FromFile(path + image + ".png");
+
         }
 
         private void SetButtonWithPic(int intname)
-            {
+        {
             intname = rnd.Next(0, listallbuttonsforpairing.Count());
             pic = picnamelist[num - 1];
             listallbuttonsforpairing[intname].Text = pic;
@@ -129,7 +129,7 @@ namespace MemoryApp
         }
         private void PairButtons()
         {
-            
+
             for (int i = 1; i < 21; i++)
             {
                 num = i;
@@ -139,7 +139,7 @@ namespace MemoryApp
                 SetButtonWithPic(num2);
             }
         }
-        private void SetEndResults( string winner, string image)
+        private void SetEndResults(string winner, string image)
         {
             SetDisplayMessage(winner);
             SetImage(image, tblpicbox);
@@ -156,7 +156,7 @@ namespace MemoryApp
             tblPlayer1.Visible = tf;
             tblPlayer2.Visible = tf;
         }
-        private void TblScore1Visible( bool tf)
+        private void TblScore1Visible(bool tf)
         {
             tblScore1.Visible = tf;
         }
@@ -217,21 +217,34 @@ namespace MemoryApp
         {
             if (scoreplayer1 > scoreplayer2)
             {
+                SetlstButtonVisible(listallbuttons, false);
                 SetEndResults(txtName1.Text + " Won!!!!", "fireworks");
             }
             else if (scoreplayer1 < scoreplayer2)
             {
+                SetlstButtonVisible(listallbuttons, false);
                 SetEndResults(txtName2.Text + " Won!!!!", "fireworks");
             }
             else if (scoreplayer1 == scoreplayer2)
             {
+                SetlstButtonVisible(listallbuttons, false);
                 SetEndResults("TIE!!!!", "tie");
             }
         }
+        private void SetMatchedButtons()
+        {
+            SetbtnImageBox(firstClickedButton, blank);
+            SetbtnImageBox(secondClickedButton, blank);
+            SetButtonColor(firstClickedButton, Color.White, true);
+            SetButtonColor(secondClickedButton, Color.White, true);
+            firstClickedButton.Text = "";
+            secondClickedButton.Text = "";
+            firstClickedButton.Enabled = false;
+            secondClickedButton.Enabled = false;
+        }
         private void GotMatch()
         {
-            SetButtonVisible(firstClickedButton, false);
-            SetButtonVisible(secondClickedButton, false);
+            SetMatchedButtons();
             ClearTurns();
             if (gamestatus == gamestatusenum.Player2turn)
             {
