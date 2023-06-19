@@ -109,6 +109,7 @@ namespace MemoryApp
         {
             lstbtn.ForEach(b => b.Visible = tf);
         }
+        //AF This doesn't seem to be called anywhere, you can delete if it's not being used
         private void SetButtonVisible(Button btn, bool tf)
         {
             btn.Visible = tf;
@@ -164,6 +165,7 @@ namespace MemoryApp
         {
             btnStart.Text = txt;
         }
+        //AF I think it would be neater code to move this out of the event handler into its own procedure, and then just call it here
         private void BtnStart_Click(object? sender, EventArgs e)
         {
             tblpicbox.Image = null;
@@ -262,6 +264,8 @@ namespace MemoryApp
             }
         }
 
+        //AF I think it would be neater code to move this out of the event handler into its own procedure, and then just call it here
+        //AF It would be good to make the name clearer, like BtnCardClick etc. - when I see BtnClick, I don't know what button it's refering to
         private void Btn_Click(object? sender, EventArgs e)
         {
             if (playerClickCount >= 2)
@@ -271,6 +275,7 @@ namespace MemoryApp
                 Button clickedButton = (Button)sender;
                 if (firstClickedButton != null)
                 {
+                    //AF You can combine this with the if statement above it by using the and operator (&) - no need to divide it into 2 if statements
                     if (firstClickedButton.Name == clickedButton.Name)
                     {
                         return;
@@ -286,6 +291,7 @@ namespace MemoryApp
                         SetImage(pic, frontpicbox);
                         SetbtnImageBox(clickedButton, frontpicbox);
                     }
+                    //AF This is repeating the same exact if statement that the code is already nested in
                     else if (secondClickedButton == null)
                     {
                         secondClickedButton = clickedButton;
@@ -308,6 +314,8 @@ namespace MemoryApp
                 }
             }
         }
+        
+        //AF Is there a reason that the button is called BtnDone1 and not just BtnDone.  Done1 makes it sound like there is more than one "done" button
         private void BtnDone1_Click(object? sender, EventArgs e)
         {
             
