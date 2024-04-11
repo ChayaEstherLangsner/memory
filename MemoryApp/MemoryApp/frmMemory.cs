@@ -187,7 +187,6 @@ namespace MemoryApp
             gamestatus = gamestatusenum.Player1turn;
             btnDone1.Visible = false;
         }
-        //AF I think it would be neater code to move this out of the event handler into its own procedure, and then just call it here
         private void BtnStart_Click(object? sender, EventArgs e)
         {
             tblpicbox.Image = null;
@@ -264,8 +263,6 @@ namespace MemoryApp
             }
         }
 
-        //AF I think it would be neater code to move this out of the event handler into its own procedure, and then just call it here
-        //AF It would be good to make the name clearer, like BtnCardClick etc. - when I see BtnClick, I don't know what button it's refering to
         private void PlayerTurn(object? sender)
         {
             Button clickedButton = (Button)sender;
@@ -285,7 +282,6 @@ namespace MemoryApp
                     SetImage(pic, frontpicbox);
                     SetbtnImageBox(clickedButton, frontpicbox);
                 }
-                //AF This is repeating the same exact if statement that the code is already nested in
                 else
                 {
                     secondClickedButton = clickedButton;
@@ -318,6 +314,8 @@ namespace MemoryApp
         }
         
         //AF Is there a reason that the button is called BtnDone1 and not just BtnDone.  Done1 makes it sound like there is more than one "done" button
+       //AF I was suggesting that the button itself should just be called btnDone, if you are keeping the button as btnDone1,
+       //then the event handler should be kept with the same name as the button
         private void BtnDone_Click(object? sender, EventArgs e)
         {
             
