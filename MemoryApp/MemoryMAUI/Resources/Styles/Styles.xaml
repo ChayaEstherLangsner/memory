@@ -24,7 +24,24 @@
     </Style>
 
     <Style TargetType="Button">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
+        <Setter Property="TextColor" Value="Purple"/>
+        <Setter Property="Background">
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="Yellow" Offset="0"/>
+                <GradientStop Color="YellowGreen" Offset="1"/>
+                <GradientStop Color="Green" Offset="1"/>
+            </LinearGradientBrush>
+        </Setter>
+        <Setter Property="BorderColor" Value="Purple"/>
+        <Setter Property="BorderWidth" Value="4"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Shadow">
+            <Shadow Brush="Purple"
+                            Offset="2,2"
+                            Radius="5"
+                            Opacity=".7"/>
+        </Setter>
+        <!--<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />-->
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
@@ -146,10 +163,29 @@
     </Style>
 
     <Style TargetType="Label">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
+        <!--<Setter Property="Background">
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="Blue" Offset="0"/>
+                --><!--<GradientStop Color="LightBlue" Offset=".3"/>-->
+                <!--<GradientStop Color="" Offset="1"/>--><!--
+            </LinearGradientBrush>
+        </Setter>-->
+        <Setter Property="TextColor" Value="Purple" />
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Shadow">
+            <Shadow Brush="Black"
+                            Offset="2,2"
+                            Radius="5"
+                            Opacity=".7"/>
+        </Setter>
+        
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="FontSize" Value="Medium"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
+            <!--<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />-->
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal" />
@@ -356,15 +392,18 @@
     </Style>
 
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
-        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}" />
+        <Setter Property="Shell.TabBarForegroundColor" Value="Purple"/>
+        <Setter Property="Shell.BackgroundColor" Value="Purple"/>
+        <Setter Property="Shell.TabBarTitleColor" Value="Purple"/>
+        <!--<Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}" />-->
         <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={StaticResource Primary}, Default={StaticResource White}}" />
         <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
         <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray200}}" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
         <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-        <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+        <!--<Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />-->
+        <!--<Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />-->
         <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}" />
     </Style>
 

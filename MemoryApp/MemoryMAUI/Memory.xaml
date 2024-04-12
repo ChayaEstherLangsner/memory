@@ -3,10 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MemoryMAUI.Memory"
              Title="Memory">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ContentPage.Resources>
+        <Style TargetType="ImageButton" x:Key="game-button">
+            <Setter Property="Source" Value="card.jpeg" />
+        </Style>
+    </ContentPage.Resources>
+    <Grid ColumnDefinitions="auto,*" RowDefinitions="*">
+        <StackLayout Spacing="40" Padding="10">
+            <Label FontAttributes="Bold" TextTransform="Uppercase" Text="Produce Pairs" FontSize="Header"/>
+            <Grid  ColumnDefinitions="*,*" RowDefinitions="*,*" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Grid.Column="0" Grid.Row="0" Text="Score 1"/>
+                <Border Grid.Column="1" Grid.Row="0">
+                <Label/>
+                </Border>
+                <Label Grid.Column="0" Grid.Row="1"  Text="Score 2"/>
+                <Border Grid.Column="1" Grid.Row="1">
+                <Label/>
+                </Border>
+            </Grid>
+            <Label FontSize="25" Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="3" Text="Turn 1"/>
+            <Button  HorizontalOptions="Center" Text="New Game"/>
+        </StackLayout>
+        <Grid Margin="10" Padding="10" ColumnDefinitions="*,*,*,*,*,*,*,*" RowDefinitions="*,*,*,*,*" Grid.Column="1" Grid.Row="0">
+        <ImageButton Grid.Column="0" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="1" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="2" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="3" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="4" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="5" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="6" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="7" Grid.Row="0" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="0" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="1" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="3" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="4" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="5" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="6" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="7" Grid.Row="1" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="0" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="1" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="2" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="3" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="4" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="5" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="6" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="7" Grid.Row="2" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="0" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="1" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="2" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="3" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="4" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="5" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="6" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="7" Grid.Row="3" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="0" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="1" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="2" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="3" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="5" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="6" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="7" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+        <ImageButton Grid.Column="4" Grid.Row="4" Style="{StaticResource Key=game-button}"/>
+    </Grid>
+    </Grid>
 </ContentPage>

@@ -49,6 +49,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\card.png" />
+	  <MauiImage Remove="Resources\Images\title.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\card.jpeg" />
+	  <None Remove="Resources\Images\title.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Memory.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -3,7 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MemoryMAUI.MemoryStartUp"
              Title="MemoryStartUp">
-    <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*,*">
-        <Label Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Text="Produce Pairs"/>
-    </Grid>
+    <StackLayout Spacing="40" Padding="10">
+        <Label FontAttributes="Bold" TextTransform="Uppercase" Text="Produce Pairs" FontSize="Header"/>
+        <Grid  ColumnDefinitions="*,*" RowDefinitions="*,*" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Grid.Column="0" Grid.Row="0" Text="Player 1"/>
+            <Entry Grid.Column="1" Grid.Row="0"/>
+            <Label Grid.Column="0" Grid.Row="1" Text="Player 2"/>
+            <Entry Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <Label FontSize="25" Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="3" Text="Enter names to begin"/>
+        <Button  HorizontalOptions="Center" Text="Start"/>
+    </StackLayout>
 </ContentPage>
